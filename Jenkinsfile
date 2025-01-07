@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('docker-hub-credentials-id')
+        DOCKERHUB_CREDENTIALS = credentials('nour8776')
     }
     stages {
         stage('Clone Repository') {
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image from Dockerfile
-                    sh 'docker build -t <your-dockerhub-username>/<project-name> .'
+                    sh 'docker build -t nour90/Assignment .'
                 }
             }
         }
